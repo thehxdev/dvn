@@ -110,11 +110,14 @@ static inline void ball_cells_collision_handler(Ball &b, int kind) {
             if (!CheckCollisionCircleRec(b.center, b.radius, cell))
                 continue;
             cell_state = !cell_state;
-            if (b.center.x <= cell.x - b.radius || b.center.x - b.radius >= cell.x)
-                b.v.x *= -1;
-            if (b.center.y <= cell.y - b.radius || b.center.y - b.radius >= cell.y)
-                b.v.y *= -1;
+            if (b.center.x + b.radius >= cell.x || b.center.x - b.radius <= cell.x + cell.width)
+                b.v.x *= -1.f;
+            else if (b.center.y + b.radius >= cell.y || b.center.y - b.radius <= cell.y + cell.height)
+                b.v.y *= -1.f;
+            goto done;
         }
+done:
+    return;
 }
 
 int main(void) {
