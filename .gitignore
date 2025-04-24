@@ -1,0 +1,5 @@
+build
+raylib
+*.zip
+.cache
+compile_flags.txt
