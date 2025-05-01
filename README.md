@@ -2,8 +2,8 @@
 DvN (Day vs Night) is an automatic game that runs only by the computer.
 
 ## Build
-1. Download Raylib precompiled package from the [official releases](https://github.com/raysan5/raylib/releases) for your platform.
-2. In the project root directory, extract the archive and rename the resulting directory to `raylib`.
+1. Download Raylib precompiled package from the [official releases](https://github.com/raysan5/raylib/releases) for your platform and toolchain.
+2. In the project root directory, extract the Raylib archive and rename the resulting directory to `raylib`.
 3. Build the project with CMake:
 ```bash
 mkdir -p build
